@@ -6,7 +6,7 @@ type NavBarProps = {
   handleSetCenterColumn: (value: string) => void;
 }
 
-function NavBar( {navlinks, handleSetCenterColumn}: NavBarProps) {
+const NavBar = ( {navlinks, handleSetCenterColumn}: NavBarProps) => {
 
   return (
     <nav className={styles['nav']}>

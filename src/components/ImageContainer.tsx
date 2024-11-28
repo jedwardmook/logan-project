@@ -16,8 +16,8 @@ type ImageContainerProps = {
   images: imageCollectionObj[];
 }
 
-function ImageContainer({images}: ImageContainerProps ) {
-  const [imageClicked, setImageClicked] = useState<imageObj | null>(null)
+const ImageContainer = ({images}: ImageContainerProps ) => {
+  const [imageClicked, setImageClicked] = useState<imageObj | null>(null);
 
   const handleImageClick = (imageObj: imageObj) => {
     setImageClicked(imageObj)

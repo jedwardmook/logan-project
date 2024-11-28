@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/hello.module.css'
 
-function Hello () {
+const Hello = () => {
   return (
     <main className={styles['hello-main-container']}>
       <div className={styles['hello-container']}>

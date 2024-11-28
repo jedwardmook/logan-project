@@ -5,7 +5,7 @@ import ImageContainer from './ImageContainer'
 import Hello from './Hello'
 
 
-function Body() {
+const Body = () => {
   const [centerColumn, setCenterColumn] = useState('Hello!')
 
   const handleSetCenterColumn = (centerColumn: string) => {
