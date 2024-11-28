@@ -1,0 +1,40 @@
+:root {
+  --text-color-0: black;
+  --text-color-1: black;
+  --text-color-2: black;
+  --text-color-3: black;
+  --text-color-4: black;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-name {
+  margin: 0;
+  transition: color .15s ease-in-out, scale .15s ease-in-out;
+
+  &:hover {
+    scale: 1.25;
+    animation: wiggle 0.25s ease-in-out infinite;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(-5deg);
+  }
+  50% {
+      transform: rotate(0deg);
+  }
+  75% {
+      transform: rotate(5deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}

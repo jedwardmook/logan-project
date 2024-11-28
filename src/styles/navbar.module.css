@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+}
+
+.nav_button {
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  margin: 0 0 5px 0;
+  font-weight: lighter;
+  transition: color .25s ease-in-out, scale .25s ease-in-out;
+
+  &:hover {
+    scale: 1.05;
+    color: rgb(135, 225, 0);
+  }
+}

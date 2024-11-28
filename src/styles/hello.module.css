@@ -1,0 +1,19 @@
+.hello-main-container {
+  margin: 0 200px 0 200px;
+  height: 100vh;
+}
+
+.hello-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hello-image {
+  margin: 1rem;
+  width: 400px;
+}
+
+.hello-about-container {
+  margin: 0 2rem 0 2rem;
+}
