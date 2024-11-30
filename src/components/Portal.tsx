@@ -1,16 +1,15 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 type PortalProps = {
   children: ReactNode
-  Component: React.ElementType
 }
 
-const Portal = ({Component, children}: PortalProps) => {
+const Portal = ({children}: PortalProps) => {
   const portalRoot = document.getElementById('portal-root')
   if (!portalRoot) return null;
 
-  return createPortal(<Component>{children}</Component>, portalRoot);
+  return createPortal(children, portalRoot);
 }
 
-export default Portal
+export default Portal;

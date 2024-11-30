@@ -29,6 +29,13 @@ const Body = () => {
         {alt: 'pen and ink', address: 'https://www.logankruidenier.com/uploads/5/4/9/5/54951567/img-1845_orig.jpg'}
       ]
     },
+    { title: 'Visual Arts EXPLORATIONs / special needs & diverse learners / After School Matters, summer 2020 (pictures taken by students)',
+      images: [
+        {alt: 'drawing', address: 'https://www.logankruidenier.com/uploads/5/4/9/5/54951567/e4_orig.jpg'},
+        {alt: 'drawing', address: 'https://www.logankruidenier.com/uploads/5/4/9/5/54951567/img-2692_orig.jpg'},
+        {alt: 'drawing', address: 'https://www.logankruidenier.com/uploads/5/4/9/5/54951567/img-2695_orig.jpg'}
+      ]
+    }
   ];
 
   return (
@@ -43,8 +50,8 @@ const Body = () => {
         <img 
           alt='drawing gif' 
           src='https://media4.giphy.com/media/vpl0yUrDzOm2iAEQ72/giphy.webp?cid=790b7611wyfaeaw3rcuro6kc3r18iti648l0tuynteb1yj5g&ep=v1_gifs_search&rid=giphy.webp&ct=g' 
-          style={{ width: '175px'}}
-          />
+          style={{ width: '175px' }}
+        />
       </aside>
       {handleSetCenterColumn(centerColumn)}
       <div style={{ position: 'fixed', right: 0, height: '90vw', width: '200px'}}>

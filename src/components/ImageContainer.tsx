@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import styles from '../styles/imageContainer.module.css'
+import Portal from './Portal';
+import CollectionViewer from './CollectionViewer';
 
 type imageObj = {
   alt: string;
@@ -9,7 +11,6 @@ type imageObj = {
 type imageCollectionObj = {
   title: string;
   images: imageObj[]
- 
 }
 
 type ImageContainerProps = {
@@ -17,13 +18,17 @@ type ImageContainerProps = {
 }
 
 const ImageContainer = ({images}: ImageContainerProps ) => {
-  const [imageClicked, setImageClicked] = useState<imageObj | null>(null);
+  const [collectionClicked, setCollectionClicked] = useState<imageCollectionObj | null>(null);
 
-  const handleImageClick = (imageObj: imageObj) => {
-    setImageClicked(imageObj)
+  const handleImageClick = (imageCollection: imageCollectionObj) => {
+    setCollectionClicked(imageCollection)
+  }
+  
+  const handleClose = () => {
+    setCollectionClicked(null)
   }
 
-  console.log(imageClicked)
+  console.log(collectionClicked)
 
   return (
     <div className={styles['images-container']}>
@@ -39,11 +44,19 @@ const ImageContainer = ({images}: ImageContainerProps ) => {
               alt={imageObj.alt}
               src={imageObj.address}
               className={styles['image']}
-              onClick={() => handleImageClick(imageObj)}
+              onClick={() => handleImageClick(imageCollection)}
             />
           ))}
         </div>
       ))}
+      {collectionClicked && (
+        <Portal>
+          <CollectionViewer
+            imageCollection={collectionClicked}
+            onClose={() => handleClose()}
+            />
+        </ Portal>
+      )}
     </div>
   )
 }
